@@ -1,6 +1,5 @@
-const index = require('./employee');
-//html structure 
 
+//html structure 
 
 
 // pending the user input from inquirer
@@ -44,4 +43,4 @@ ${myVariable}
 // potential solution
 // create a function that handles a specific array of data to create the file
 
-module.exports = pageTemplate;
+//module.exports = pageTemplate;

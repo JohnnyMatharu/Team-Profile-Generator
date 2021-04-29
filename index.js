@@ -196,7 +196,10 @@ const questions = () => {
         options(jobTitle);
     
   //the following two are ending for .then function  
-  })
+  }).then(answers => {
+    console.info('Answer:', answers.name);
+  });
+
 };
 // the above yellow bracket is end of function questions 
 questions();
