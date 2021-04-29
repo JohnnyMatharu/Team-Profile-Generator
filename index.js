@@ -13,10 +13,14 @@
 
 const fs = require('fs');
 const inquirer = require('inquirer');
+const pageTemplate = require('./pageTemplate');
+//check why this value is hidden one line above, pageTemplate 
+
 // this will link the license badge page
 //const licensePage = require('./utils/generateMarkdown.js');
 // test
 
+//Neil: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super
 
 
 // test finish
@@ -194,9 +198,15 @@ const questions = () => {
   })
 };
 // the above yellow bracket is end of function questions 
-questions();
-
-
+//questions();
+  //.then(employeeData => {
+   // return pageTemplate(employeeData);
+ // })
+ // .then(index => {
+ //   return writeFile(index);
+  //})
+module.exports = questions;  
+module.exports = options;
 
 
 
