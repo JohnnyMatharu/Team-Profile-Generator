@@ -14,6 +14,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const pageTemplate = require('./pageTemplate');
+const Employee = require('./lib/employee');
 //check why this value is hidden one line above, pageTemplate 
 
 // this will link the license badge page
@@ -207,6 +208,7 @@ questions();
   //})
 module.exports = questions;  
 
+//console.log(Employee.Manager);
 
 
 
