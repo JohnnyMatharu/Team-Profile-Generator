@@ -198,7 +198,7 @@ const questions = () => {
   })
 };
 // the above yellow bracket is end of function questions 
-//questions();
+questions();
   //.then(employeeData => {
    // return pageTemplate(employeeData);
  // })
@@ -206,7 +206,6 @@ const questions = () => {
  //   return writeFile(index);
   //})
 module.exports = questions;  
-module.exports = options;
 
 
 
