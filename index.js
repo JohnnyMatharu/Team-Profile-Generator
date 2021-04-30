@@ -13,8 +13,10 @@
 
 const fs = require('fs');
 const inquirer = require('inquirer');
-const pageTemplate = require('./pageTemplate');
-const Employee = require('./lib/employee');
+//const pageTemplate = require('./pageTemplate');
+const Manager = require('./lib/manager');
+const Intern = require('./lib/intern');
+const Engineer = require('./lib/engineer');
 //check why this value is hidden one line above, pageTemplate 
 
 // this will link the license badge page
@@ -71,7 +73,7 @@ const questions = () => {
           
 //follow structure from previous assgn        
 ]).then(data =>  {
-    console.log(data)
+ // Manager (data.name, data.id) area needs fixing based on instructions and notepad before moving another section data must work
     let jobTitle = data.designation;
 //Here you will insert a parent constructor function and assign values to it from data, link it to html div display so each time you make entry it will get displayed in seperate div
 
@@ -196,10 +198,7 @@ const questions = () => {
         options(jobTitle);
     
   //the following two are ending for .then function  
-  }).then(answers => {
-    console.info('Answer:', answers.name);
-  });
-
+  }) 
 };
 // the above yellow bracket is end of function questions 
 questions();
@@ -208,8 +207,9 @@ questions();
  // })
  // .then(index => {
  //   return writeFile(index);
-  //})
-module.exports = questions;  
+  //
+
+ 
 
 //console.log(Employee.Manager);
 
