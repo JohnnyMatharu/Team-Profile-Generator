@@ -73,7 +73,9 @@ const questions = () => {
           
 //follow structure from previous assgn        
 ]).then(data =>  {
- // Manager (data.name, data.id) area needs fixing based on instructions and notepad before moving another section data must work
+ new Manager (data.name); 
+ console.log(Manager);
+ //area needs fixing based on instructions and notepad before moving another section data must work
     let jobTitle = data.designation;
 //Here you will insert a parent constructor function and assign values to it from data, link it to html div display so each time you make entry it will get displayed in seperate div
 
