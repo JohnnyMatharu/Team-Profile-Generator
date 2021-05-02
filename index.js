@@ -133,12 +133,9 @@ const writeFile = () => {
 
                   ]).then(data =>  {
                     console.log(data.continueTitle);
-                    if (data.continueTitle === "Engineer") 
-                    {
                     let newEngineer = new Engineer(data.name, data.id, data.email, data.github, data.continueTitle);
                     console.log(newEngineer.name);
                     console.log(testpageTemplate(newEngineer)); 
-                 
                   
 //test
 const testwriteFile = () => {
@@ -150,10 +147,7 @@ const testwriteFile = () => {
   };
   testwriteFile(); 
   //test
-                    }
-
-
-
+                  
                     jobTitle = data.continueTitle;
                     //Here you will insert a parent constructor function and assign values to it from data, link it to html div display so each time you make entry it will get displayed in seperate div     
                           if (jobTitle === "Engineer")
