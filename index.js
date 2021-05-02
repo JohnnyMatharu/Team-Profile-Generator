@@ -17,6 +17,7 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/manager');
 const Intern = require('./lib/intern');
 const Engineer = require('./lib/engineer');
+const pageTemplate = require('./pageTemplate');
 //check why this value is hidden one line above, pageTemplate 
 
 // this will link the license badge page
@@ -76,6 +77,16 @@ const questions = () => {
   let newManager = new Manager(data.name, data.id, data.email, data.designation, data.number);
  
  console.log(newManager.name);
+ console.log(pageTemplate(newManager));
+const writeFile = () => {
+  return fs.writeFile('index.html', pageTemplate(newManager), (err) => {
+    if (err) throw err;
+    console.log('The file has been saved!');
+  }); 
+
+  };
+  writeFile(); 
+
 // console.log(newManager.getName);
  //area needs fixing based on instructions and notepad before moving another section data must work
     let jobTitle = data.designation;
@@ -206,7 +217,9 @@ const questions = () => {
 };
 // the above yellow bracket is end of function questions 
 questions();
-  //.then(employeeData => {
+
+ 
+      //.then(employeeData => {
    // return pageTemplate(employeeData);
  // })
  // .then(index => {
@@ -217,7 +230,15 @@ questions();
 
 //console.log(Employee.Manager);
 
+/*
+const fs = require('fs');
 
+// writing files
+const writeFile = fileContent => {
+  return new Promise((resolve, reject) => {
+    fs.writeFile('./dist/index.html', fileContent, err => {
+
+*/
 
 
 
