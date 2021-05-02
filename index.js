@@ -19,8 +19,8 @@ const Intern = require('./lib/intern');
 const Engineer = require('./lib/engineer');
 const pageTemplate = require('./pageTemplate');
 //test
-const testpageTemplate = require('./testpageTemplate');
-
+//const testpageTemplate = require('./testpageTemplate');
+let team = [];
 
 //check why this value is hidden one line above, pageTemplate 
 
@@ -78,26 +78,17 @@ const questions = () => {
           
 //follow structure from previous assgn        
 ]).then(data =>  {
-  let newManager = new Manager(data.name, data.id, data.email, data.designation, data.number);
+  let newManager = new Manager(data.name, data.id, data.email, data.number);
+  team.push("Manager", newManager);
+// console.log(team[1].number);
  
- console.log(newManager.name);
- console.log(pageTemplate(newManager));
-const writeFile = () => {
-  return fs.writeFile('index.html', pageTemplate(newManager), (err) => {
-    if (err) throw err;
-    console.log('The file has been saved!');
-  }); 
-
-  };
-  writeFile(); 
-
 // console.log(newManager.getName);
  //area needs fixing based on instructions and notepad before moving another section data must work
     let jobTitle = data.designation;
 //Here you will insert a parent constructor function and assign values to it from data, link it to html div display so each time you make entry it will get displayed in seperate div
 
     function options (jobTitle){
-      console.log(jobTitle);      
+  //    console.log(jobTitle);      
       if (jobTitle === "Engineer") 
         {
           inquirer.prompt(
@@ -133,21 +124,11 @@ const writeFile = () => {
 
                   ]).then(data =>  {
                     console.log(data.continueTitle);
-                    let newEngineer = new Engineer(data.name, data.id, data.email, data.github, data.continueTitle);
-                    console.log(newEngineer.name);
-                    console.log(testpageTemplate(newEngineer)); 
-                  
-//test
-const testwriteFile = () => {
-  return fs.writeFile('index.html', testpageTemplate(newEngineer), (err) => {
-    if (err) throw err;
-    console.log('The file has been saved!');
-  }); 
+                  let newEngineer = new Engineer(data.name, data.id, data.email, data.github);
+                    team.push("Engineer", newEngineer);
+                   
+                   
 
-  };
-  testwriteFile(); 
-  //test
-                  
                     jobTitle = data.continueTitle;
                     //Here you will insert a parent constructor function and assign values to it from data, link it to html div display so each time you make entry it will get displayed in seperate div     
                           if (jobTitle === "Engineer")
@@ -200,7 +181,11 @@ const testwriteFile = () => {
                       }
 
                   ]).then(data =>  {
-                    console.log(data);
+                    let newIntern = new Intern(data.name, data.id, data.email, data.school);
+                    team.push("Intern", newIntern);
+                   
+
+
                     jobTitle = data.continueTitle;
                     //Here you will insert a parent constructor function and assign values to it from data, link it to html div display so each time you make entry it will get displayed in seperate div     
                           if (jobTitle === "Engineer")
@@ -213,6 +198,20 @@ const testwriteFile = () => {
                           }
                           else {
                             console.log("We are all done, thanks !!!")
+                            console.log(team);
+
+//you will have to use data both places here
+ console.log(pageTemplate(team));
+const writeFile = () => {
+  return fs.writeFile('index.html', pageTemplate(team), (err) => {
+    if (err) throw err;
+    console.log('The file has been saved!');
+  }); 
+
+  };
+  writeFile(); 
+
+
                           return 
                           };
               //Here you will insert an inherited child function and assign values to it from data, link it to html div display so each time you make entry it will get displayed in seperate div
@@ -223,49 +222,34 @@ const testwriteFile = () => {
         // you can add .then from here if needed as above          
       else { 
         console.log("We are all done, thanks !!!")
+        console.log(team);
+//you will have to use data both places here
+console.log(pageTemplate(team));
+const writeFile = () => {
+  return fs.writeFile('index.html', pageTemplate(team), (err) => {
+    if (err) throw err;
+    console.log('The file has been saved!');
+  }); 
+
+  };
+  writeFile(); 
         return 
+
       }
       
       
       }
                 //the above curly bracket belongs to function options ending 
         options(jobTitle);
-    
+        
   //the following two are ending for .then function  
   }) 
+  
+
 };
 // the above yellow bracket is end of function questions 
+
 questions();
-
- 
-      //.then(employeeData => {
-   // return pageTemplate(employeeData);
- // })
- // .then(index => {
- //   return writeFile(index);
-  //
-
- 
-
-//console.log(Employee.Manager);
-
-/*
-const fs = require('fs');
-
-// writing files
-const writeFile = fileContent => {
-  return new Promise((resolve, reject) => {
-    fs.writeFile('./dist/index.html', fileContent, err => {
-
-*/
-
-
-
-
-
-
-
-
 
 
 
@@ -352,5 +336,49 @@ const writeFile = fileContent => {
 //Hilary assignment:
 
 //once select engineer, another set of questions when done will you like another or exit. Asking for schools instead be asking of GitHub, also video from Hilary has a sample 
+
+//psuedo code:
+
+//create array to hold all team members
+//create classes 
+//push in team array
+//after we have full array 
+//send all info to page template
+//seperate data by role in page template, sep arrays or data filter
+//3 seperate templates 
+//html array and templates will be pushed according to data and those many times as we have them
+//writefile to index.html 
+
+//filer or map can be used once you are on the pageTemplate
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter (edited) 
+//developer.mozilla.orgdeveloper.mozilla.org
+//Array.prototype.filter() - JavaScript | MDN
+//The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+//4:46
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map (edited) 
+//developer.mozilla.orgdeveloper.mozilla.org
+//Array.prototype.map() - JavaScript | MDN
+//The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

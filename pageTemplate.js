@@ -2,8 +2,19 @@
 
 // fs.writefile creates new files for each run of the app
 // for every instance of a new employee (for loop)
-const pageTemplate = newManager => {
-console.log("this the checked***")
+
+
+/*
+let team = [
+    
+{
+managerTemplate : 
+},{},{}];
+*/
+
+
+const pageTemplate = team => {
+console.log(team[1], "this the checked***" );
 
 return `
 <!DOCTYPE html>
@@ -24,12 +35,12 @@ return `
 <body>
 <div class = "section">
 <div class = "frame">
-<h1>${newManager.name}</h1>
+<h1>${team[1]}</h1>
 <h3><i class="fas fa-tasks"></i>  Manager</h3>
 <br>
-<h5>ID: ${newManager.id}</h5>
-<h5>Email: ${newManager.email}</h5>
-<h5>Office number: ${newManager.number}</h5> 
+<h5>ID: ${team[1]}</h5>
+<h5>Email: ${team[1]}</h5>
+<h5>Office number: ${team[1]}</h5> 
 </div>
 </div>
 </body>
@@ -37,6 +48,21 @@ return `
 }
 
 module.exports = pageTemplate;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 let numberEmployees = 5; 
@@ -72,3 +98,46 @@ ${myVariable}
 // create a function that handles a specific array of data to create the file
 */
 
+
+
+/*
+
+
+// fs.writefile creates new files for each run of the app
+// for every instance of a new employee (for loop)
+const pageTemplate = newManager => {
+console.log("this the checked***")
+
+return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class = "section">
+<div class = "frame">
+<h1>${newManager.name}</h1>
+<h3><i class="fas fa-tasks"></i>  Manager</h3>
+<br>
+<h5>ID: ${newManager.id}</h5>
+<h5>Email: ${newManager.email}</h5>
+<h5>Office number: ${newManager.number}</h5> 
+</div>
+</div>
+</body>
+</html>` 
+}
+
+module.exports = pageTemplate;
+*/
