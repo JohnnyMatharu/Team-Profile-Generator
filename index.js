@@ -75,7 +75,8 @@ const questions = () => {
 ]).then(data =>  {
   let newManager = new Manager(data.name, data.id, data.email, data.designation, data.number);
  
- console.log(newManager, "hello this is the console log i'm looking for ");
+ console.log(newManager.name);
+// console.log(newManager.getName);
  //area needs fixing based on instructions and notepad before moving another section data must work
     let jobTitle = data.designation;
 //Here you will insert a parent constructor function and assign values to it from data, link it to html div display so each time you make entry it will get displayed in seperate div
