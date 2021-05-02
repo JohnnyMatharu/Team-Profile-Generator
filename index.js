@@ -18,6 +18,10 @@ const Manager = require('./lib/manager');
 const Intern = require('./lib/intern');
 const Engineer = require('./lib/engineer');
 const pageTemplate = require('./pageTemplate');
+//test
+const testpageTemplate = require('./testpageTemplate');
+
+
 //check why this value is hidden one line above, pageTemplate 
 
 // this will link the license badge page
@@ -128,7 +132,28 @@ const writeFile = () => {
 
 
                   ]).then(data =>  {
-                    console.log(data);
+                    console.log(data.continueTitle);
+                    if (data.continueTitle === "Engineer") 
+                    {
+                    let newEngineer = new Engineer(data.name, data.id, data.email, data.github, data.continueTitle);
+                    console.log(newEngineer.name);
+                    console.log(testpageTemplate(newEngineer)); 
+                 
+                  
+//test
+const testwriteFile = () => {
+  return fs.writeFile('index.html', testpageTemplate(newEngineer), (err) => {
+    if (err) throw err;
+    console.log('The file has been saved!');
+  }); 
+
+  };
+  testwriteFile(); 
+  //test
+                    }
+
+
+
                     jobTitle = data.continueTitle;
                     //Here you will insert a parent constructor function and assign values to it from data, link it to html div display so each time you make entry it will get displayed in seperate div     
                           if (jobTitle === "Engineer")

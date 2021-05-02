@@ -13,17 +13,25 @@ return `
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+    rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-<h1>${newManager.name}</h>
+<div class = "section">
+<div class = "frame">
+<h1>${newManager.name}</h1>
+<h3><i class="fas fa-tasks"></i>  Manager</h3>
 <br>
-<h1>${newManager.designation}</h1>
-<br>
-<h1>${newManager.id}</h1>
-<br>
-<h1>${newManager.email}</h>
-<br>
-<h1>${newManager.number}</h1> 
+<h5>ID: ${newManager.id}</h5>
+<h5>Email: ${newManager.email}</h5>
+<h5>Office number: ${newManager.number}</h5> 
+</div>
+</div>
 </body>
 </html>` 
 }
