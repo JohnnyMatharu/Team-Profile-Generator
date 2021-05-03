@@ -4,17 +4,54 @@
 // for every instance of a new employee (for loop)
 
 
-/*
-let team = [
-    
+
+
+
+let arrTemplate = [`
+<div class = "frame">
+<h1>${team1[0]}</h1>
+<h3><i class="fas fa-tasks"></i>  Manager</h3>
+<br>
+<h5>ID: ${team1[2]}</h5>
+<h5>Email: ${team1[3]}</h5>
+<h5>Office number: ${team1[4]}</h5> 
+</div>`,
+ `<div class = "frame">
+<h1>${team2[0]}</h1>
+<h3><i class="fas fa-tasks"></i>  Engineer</h3>
+<br>
+<h5>ID: ${team2[2]}</h5>
+<h5>Email: ${team2[3]}</h5>
+<h5>Github: ${team2[4]}</h5> 
+</div>`,
+`<div class = "frame">
+<h1>${team3[0]}</h1>
+<h3><i class="fas fa-tasks"></i>  Intern</h3>
+<br>
+<h5>ID: ${team3[2]}</h5>
+<h5>Email: ${team3[3]}</h5>
+<h5>Office number: ${team3[4]}</h5> 
+</div>`
+] 
+
+function choice (team1, team2, team3)
 {
-managerTemplate : 
-},{},{}];
-*/
+    if  (team1[1] === "Manager"); 
+{
+    return `${arrTemplate[0]}`;
+}
+else if (team2[1] === "Engineer");
+{
+    return `${arrTemplate[1]}`;
+}
+else {
+    return `${arrTemplate[2]}`;
+}
+}
 
 
-const pageTemplate = team => {
-console.log(team[1], "this the checked***" );
+const pageTemplate = (team1,team2, team3) => {
+console.log(team1[1], "this the checked***" );
 
 return `
 <!DOCTYPE html>
@@ -34,14 +71,7 @@ return `
 </head>
 <body>
 <div class = "section">
-<div class = "frame">
-<h1>${team[1]}</h1>
-<h3><i class="fas fa-tasks"></i>  Manager</h3>
-<br>
-<h5>ID: ${team[1]}</h5>
-<h5>Email: ${team[1]}</h5>
-<h5>Office number: ${team[1]}</h5> 
-</div>
+${choice(team1, team2, team3)}
 </div>
 </body>
 </html>` 

@@ -20,8 +20,9 @@ const Engineer = require('./lib/engineer');
 const pageTemplate = require('./pageTemplate');
 //test
 //const testpageTemplate = require('./testpageTemplate');
-let team = [];
-
+let team1 = [];
+let team2 = [];
+let team3 = [];
 //check why this value is hidden one line above, pageTemplate 
 
 // this will link the license badge page
@@ -79,7 +80,7 @@ const questions = () => {
 //follow structure from previous assgn        
 ]).then(data =>  {
   let newManager = new Manager(data.name, data.id, data.email, data.number);
-  team.push("Manager", newManager);
+  team1.push(newManager.name, "Manager", newManager.id, newManager.email, newManager.number);
 // console.log(team[1].number);
  
 // console.log(newManager.getName);
@@ -125,7 +126,7 @@ const questions = () => {
                   ]).then(data =>  {
                     console.log(data.continueTitle);
                   let newEngineer = new Engineer(data.name, data.id, data.email, data.github);
-                    team.push("Engineer", newEngineer);
+                    team2.push(newEngineer.name, "Engineer", newEngineer.id, newEngineer.email, newEngineer.github);
                    
                    
 
@@ -182,7 +183,7 @@ const questions = () => {
 
                   ]).then(data =>  {
                     let newIntern = new Intern(data.name, data.id, data.email, data.school);
-                    team.push("Intern", newIntern);
+                    team3.push(newIntern.name, "Intern", newIntern.id, newIntern.email, newIntern.school);
                    
 
 
@@ -201,9 +202,9 @@ const questions = () => {
                             console.log(team);
 
 //you will have to use data both places here
- console.log(pageTemplate(team));
+ console.log(pageTemplate(team1, team2, team3));
 const writeFile = () => {
-  return fs.writeFile('index.html', pageTemplate(team), (err) => {
+  return fs.writeFile('index.html', pageTemplate(team1, team2, team3), (err) => {
     if (err) throw err;
     console.log('The file has been saved!');
   }); 
@@ -222,11 +223,11 @@ const writeFile = () => {
         // you can add .then from here if needed as above          
       else { 
         console.log("We are all done, thanks !!!")
-        console.log(team);
+        console.log(team1, team2, team3);
 //you will have to use data both places here
-console.log(pageTemplate(team));
+console.log(pageTemplate(team1));
 const writeFile = () => {
-  return fs.writeFile('index.html', pageTemplate(team), (err) => {
+  return fs.writeFile('index.html', pageTemplate(team1, team2, team3), (err) => {
     if (err) throw err;
     console.log('The file has been saved!');
   }); 
