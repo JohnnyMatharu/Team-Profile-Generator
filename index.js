@@ -10,9 +10,9 @@ const Engineer = require('./lib/engineer');
 const pageTemplate = require('./pageTemplate');
 //test
 //const testpageTemplate = require('./testpageTemplate');
-let team1 = [];
-let team2 = [];
-let team3 = [];
+let team1 = ["Manager"];
+let team2 = ["Engineer"];
+let team3 = ["Intern"];
 
 
 

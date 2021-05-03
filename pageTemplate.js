@@ -7,13 +7,8 @@
 function choice (team1, team2, team3)
 {
 var final = ``;
-   
 
-if (team1.length === 0) {
-console.log("no data");
-}
-else {
-for (var i=0; i<team1.length; i++) 
+for (var i=1; i<team1.length; i++) 
     {
         final+=`
         <div class = "frame">
@@ -26,13 +21,9 @@ for (var i=0; i<team1.length; i++)
         </div>`
 
     }
-}
-if (team2.length === 0) {
-    console.log("no data");
-    }
-    else {
-        console.log(team2.length);
-    for (var s=0; s<team2.length; s++) 
+
+    
+    for (var s=1; s<team2.length; s++) 
      {
        final+=`<div class = "frame">
     <h1>${team2[s].name}</h1>
@@ -43,12 +34,9 @@ if (team2.length === 0) {
     <h5>Github: ${team2[s].github}</h5> 
     </div>`
      }
-    }
-    if (team3.length === 0) {
-        console.log("no data");
-        }
-        else { 
-    for (var x=0; x<team3.length; x++) 
+    
+  
+    for (var x=1; x<team3.length; x++) 
      {
     final+=`<div class = "frame">
     <h1>${team3[x].name}</h1>
@@ -59,7 +47,7 @@ if (team2.length === 0) {
     <h5>School: ${team3[x].school}</h5> 
     </div>`
      }
-    }
+    
 return final;
     }
 
