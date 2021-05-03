@@ -1,5 +1,5 @@
 
-const testFunc = (numberInput) => {
+const Manager = (numberInput) => {
     return numberInput + 1
 }
 
