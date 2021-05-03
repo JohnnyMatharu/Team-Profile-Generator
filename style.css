@@ -1,9 +1,9 @@
-.frame
+.frame1
 {
     height: 300px;
     width: 180px;
     color: red;
-    border:red;
+    border: darkblue;
     border-radius: initial;
     border-width: thick;
     border-top: thick;
@@ -15,6 +15,42 @@
     margin-left: 60px; 
     margin-right: 60px;
 }
+.frame2
+{
+    height: 300px;
+    width: 180px;
+    color:blue;
+    border: darkblue;
+    border-radius: initial;
+    border-width: thick;
+    border-top: thick;
+    border-left: thick;
+    border-bottom: thick;
+    border-right: thick;
+    border-style: solid;  
+    text-align: center;
+    margin-left: 60px; 
+    margin-right: 60px;
+}
+.frame3
+{
+    height: 300px;
+    width: 180px;
+    color:green;
+    border: darkblue;
+    border-radius: initial;
+    border-width: thick;
+    border-top: thick;
+    border-left: thick;
+    border-bottom: thick;
+    border-right: thick;
+    border-style: solid;  
+    text-align: center;
+    margin-left: 60px; 
+    margin-right: 60px;
+}
+
+
 .section 
 {   
     display: flex; 

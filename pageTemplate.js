@@ -4,14 +4,14 @@
 
 
  
-function choice (team1, team2, team3)
+function choice (team1, team2 = [], team3 = [])
 {
 var final = ``;
 
 for (var i=1; i<team1.length; i++) 
     {
         final+=`
-        <div class = "frame">
+        <div class = "frame1">
         <h1>${team1[i].name}</h1>
         <h3><i class="fas fa-tasks"></i>  Manager</h3>
         <br>
@@ -25,20 +25,20 @@ for (var i=1; i<team1.length; i++)
     
     for (var s=1; s<team2.length; s++) 
      {
-       final+=`<div class = "frame">
+       final+=`<div class = "frame2">
     <h1>${team2[s].name}</h1>
     <h3><i class="fas fa-tools"></i>  Engineer</h3>
     <br>
     <h5>ID: ${team2[s].id}</h5>
     <h5>Email: ${team2[s].email}</h5>
-    <h5>Github: ${team2[s].github}</h5> 
+    <h5>Github: <a href="https://github.com/${team2[s].github}"></a></h5> 
     </div>`
      }
     
   
     for (var x=1; x<team3.length; x++) 
      {
-    final+=`<div class = "frame">
+    final+=`<div class = "frame3">
     <h1>${team3[x].name}</h1>
     <h3><i class="fas fa-user-graduate"></i>  Intern</h3>
     <br>
