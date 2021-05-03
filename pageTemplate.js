@@ -16,7 +16,7 @@ for (var i=1; i<team1.length; i++)
         <h3><i class="fas fa-tasks"></i>  Manager</h3>
         <br>
         <h5>ID: ${team1[i].id}</h5>
-        <h5>Email: ${team1[i].email}</h5>
+        <h5><a href="mailto:${team1[i].email}">Email: ${team1[i].email}</a></h5> 
         <h5>Office number: ${team1[i].number}</h5> 
         </div>`
 
@@ -30,7 +30,7 @@ for (var i=1; i<team1.length; i++)
     <h3><i class="fas fa-tools"></i>  Engineer</h3>
     <br>
     <h5>ID: ${team2[s].id}</h5>
-    <h5>Email: ${team2[s].email}</h5>
+    <h5><a href="mailto:${team2[s].email}">Email: ${team2[s].email}</a></h5> 
     <h5>Github: <a href="https://github.com/${team2[s].github}">Github Link</a></h5> 
     </div>`
      }
@@ -43,7 +43,7 @@ for (var i=1; i<team1.length; i++)
     <h3><i class="fas fa-user-graduate"></i>  Intern</h3>
     <br>
     <h5>ID: ${team3[x].id}</h5>
-    <h5>Email: ${team3[x].email}</h5>
+    <h5><a href="mailto:${team3[x].email}">Email: ${team3[x].email}</a></h5>
     <h5>School: ${team3[x].school}</h5> 
     </div>`
      }
