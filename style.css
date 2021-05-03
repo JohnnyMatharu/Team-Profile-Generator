@@ -14,6 +14,8 @@
     text-align: center;
     margin-left: 60px; 
     margin-right: 60px;
+    margin-top: 72px;
+    margin-bottom: 72px;
 }
 .frame2
 {
@@ -31,6 +33,8 @@
     text-align: center;
     margin-left: 60px; 
     margin-right: 60px;
+    margin-top: 72px;
+    margin-bottom: 72px;
 }
 .frame3
 {
@@ -48,8 +52,19 @@
     text-align: center;
     margin-left: 60px; 
     margin-right: 60px;
+    margin-top: 72px;
+    margin-bottom: 72px;
 }
 
+.picture
+{
+ height: 270px;
+    background-image: url("./pictures/file2.jpeg");
+    width: 100%;
+    font-size: xx-large;
+    text-align: center;
+    color: brown;
+}
 
 .section 
 {   

@@ -31,7 +31,7 @@ for (var i=1; i<team1.length; i++)
     <br>
     <h5>ID: ${team2[s].id}</h5>
     <h5>Email: ${team2[s].email}</h5>
-    <h5>Github: <a href="https://github.com/${team2[s].github}"></a></h5> 
+    <h5>Github: <a href="https://github.com/${team2[s].github}">Github Link</a></h5> 
     </div>`
      }
     
@@ -53,7 +53,7 @@ return final;
 
 
 const pageTemplate = (team1,team2, team3) => {
-console.log(team1[0].name, "this the checked***" );
+console.log("this the checked***" );
 
 return `
 <!DOCTYPE html>
@@ -72,9 +72,12 @@ return `
     <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+<section class = "picture"><h1>Team Profile Generator</h1></section>
+<section>
 <div class = "section">
 ${choice(team1, team2, team3)}
 </div>
+<section>
 </body>
 </html>` 
 }
