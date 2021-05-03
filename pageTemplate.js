@@ -7,51 +7,54 @@
 
 
 
-let arrTemplate = [`
-<div class = "frame">
-<h1>${team1[0]}</h1>
-<h3><i class="fas fa-tasks"></i>  Manager</h3>
-<br>
-<h5>ID: ${team1[2]}</h5>
-<h5>Email: ${team1[3]}</h5>
-<h5>Office number: ${team1[4]}</h5> 
-</div>`,
- `<div class = "frame">
-<h1>${team2[0]}</h1>
-<h3><i class="fas fa-tasks"></i>  Engineer</h3>
-<br>
-<h5>ID: ${team2[2]}</h5>
-<h5>Email: ${team2[3]}</h5>
-<h5>Github: ${team2[4]}</h5> 
-</div>`,
-`<div class = "frame">
-<h1>${team3[0]}</h1>
-<h3><i class="fas fa-tasks"></i>  Intern</h3>
-<br>
-<h5>ID: ${team3[2]}</h5>
-<h5>Email: ${team3[3]}</h5>
-<h5>Office number: ${team3[4]}</h5> 
-</div>`
-] 
+
+ 
 
 function choice (team1, team2, team3)
 {
-    if  (team1[1] === "Manager"); 
-{
-    return `${arrTemplate[0]}`;
-}
-else if (team2[1] === "Engineer");
-{
-    return `${arrTemplate[1]}`;
-}
-else {
-    return `${arrTemplate[2]}`;
-}
-}
+var final = ``;
+    for (var i=0; i<team1.length; i++) 
+    {
+        final+=`
+        <div class = "frame">
+        <h1>${team1[i].name}</h1>
+        <h3><i class="fas fa-tasks"></i>  Manager</h3>
+        <br>
+        <h5>ID: ${team1[i].id}</h5>
+        <h5>Email: ${team1[i].email}</h5>
+        <h5>Office number: ${team1[i].number}</h5> 
+        </div>`
+
+    }
+    for (var s=0; s<team2.length; s++) 
+     {
+       final+=`<div class = "frame">
+    <h1>${team2[s].name}</h1>
+    <h3><i class="fas fa-tasks"></i>  Engineer</h3>
+    <br>
+    <h5>ID: ${team2[s].id}</h5>
+    <h5>Email: ${team2[s].email}</h5>
+    <h5>Github: ${team2[s].github}</h5> 
+    </div>`
+     }
+
+     for (var x=0; x<team3.length; x++) 
+     {
+    final+=`<div class = "frame">
+    <h1>${team3[x].name}</h1>
+    <h3><i class="fas fa-tasks"></i>  Intern</h3>
+    <br>
+    <h5>ID: ${team3[x].id}</h5>
+    <h5>Email: ${team3[x].email}</h5>
+    <h5>School: ${team3[x].school}</h5> 
+    </div>`
+     }
+return final;
+    }
 
 
 const pageTemplate = (team1,team2, team3) => {
-console.log(team1[1], "this the checked***" );
+console.log(team1[0].name, "this the checked***" );
 
 return `
 <!DOCTYPE html>

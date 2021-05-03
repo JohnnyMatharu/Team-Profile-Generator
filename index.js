@@ -80,8 +80,9 @@ const questions = () => {
 //follow structure from previous assgn        
 ]).then(data =>  {
   let newManager = new Manager(data.name, data.id, data.email, data.number);
-  team1.push(newManager.name, "Manager", newManager.id, newManager.email, newManager.number);
-// console.log(team[1].number);
+  console.log(newManager);
+  team1.push(newManager);
+console.log(team1);
  
 // console.log(newManager.getName);
  //area needs fixing based on instructions and notepad before moving another section data must work
@@ -126,7 +127,7 @@ const questions = () => {
                   ]).then(data =>  {
                     console.log(data.continueTitle);
                   let newEngineer = new Engineer(data.name, data.id, data.email, data.github);
-                    team2.push(newEngineer.name, "Engineer", newEngineer.id, newEngineer.email, newEngineer.github);
+                    team2.push(newEngineer);
                    
                    
 
@@ -183,7 +184,7 @@ const questions = () => {
 
                   ]).then(data =>  {
                     let newIntern = new Intern(data.name, data.id, data.email, data.school);
-                    team3.push(newIntern.name, "Intern", newIntern.id, newIntern.email, newIntern.school);
+                    team3.push(newIntern);
                    
 
 
@@ -199,7 +200,7 @@ const questions = () => {
                           }
                           else {
                             console.log("We are all done, thanks !!!")
-                            console.log(team);
+                            console.log(team1, team2, team3);
 
 //you will have to use data both places here
  console.log(pageTemplate(team1, team2, team3));
