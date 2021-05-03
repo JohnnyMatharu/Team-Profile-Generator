@@ -9,11 +9,16 @@
 
 
  
-
 function choice (team1, team2, team3)
 {
 var final = ``;
-    for (var i=0; i<team1.length; i++) 
+   
+
+if (team1.length === 0) {
+console.log("no data");
+}
+else {
+for (var i=0; i<team1.length; i++) 
     {
         final+=`
         <div class = "frame">
@@ -26,29 +31,40 @@ var final = ``;
         </div>`
 
     }
+}
+if (team2.length === 0) {
+    console.log("no data");
+    }
+    else {
+        console.log(team2.length);
     for (var s=0; s<team2.length; s++) 
      {
        final+=`<div class = "frame">
     <h1>${team2[s].name}</h1>
-    <h3><i class="fas fa-tasks"></i>  Engineer</h3>
+    <h3><i class="fas fa-tools"></i>  Engineer</h3>
     <br>
     <h5>ID: ${team2[s].id}</h5>
     <h5>Email: ${team2[s].email}</h5>
     <h5>Github: ${team2[s].github}</h5> 
     </div>`
      }
-
-     for (var x=0; x<team3.length; x++) 
+    }
+    if (team3.length === 0) {
+        console.log("no data");
+        }
+        else { 
+    for (var x=0; x<team3.length; x++) 
      {
     final+=`<div class = "frame">
     <h1>${team3[x].name}</h1>
-    <h3><i class="fas fa-tasks"></i>  Intern</h3>
+    <h3><i class="fas fa-user-graduate"></i>  Intern</h3>
     <br>
     <h5>ID: ${team3[x].id}</h5>
     <h5>Email: ${team3[x].email}</h5>
     <h5>School: ${team3[x].school}</h5> 
     </div>`
      }
+    }
 return final;
     }
 
