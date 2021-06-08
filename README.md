@@ -13,8 +13,9 @@ https://drive.google.com/file/d/1QAq14KzLkHydUINmC_NiCE0SjJ91tCm2/view
 https://drive.google.com/file/d/1ummuIb-WGBbD6epVnutwtxqNdMqSku0z/view
 https://github.com/JohnnyMatharu/Team-Profile-Generator/tree/main
 
-# Screenshot
-
+# Screenshots
+https://github.com/JohnnyMatharu/Team-Profile-Generator/blob/main/Screen%20Shot%202021-06-08%20at%203.27.36%20PM.png?raw=true
+https://github.com/JohnnyMatharu/Team-Profile-Generator/blob/main/Screen%20Shot%202021-06-08%20at%203.29.36%20PM.png?raw=true
 
 # Made by 
 Johnny (Indermeet) Singh
