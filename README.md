@@ -15,7 +15,7 @@ https://github.com/JohnnyMatharu/Team-Profile-Generator/tree/main
 
 # Screenshots
 https://github.com/JohnnyMatharu/Team-Profile-Generator/blob/main/Screen%20Shot%202021-06-08%20at%203.27.36%20PM.png?raw=true
-https://github.com/JohnnyMatharu/Team-Profile-Generator/blob/main/Screen%20Shot%202021-06-08%20at%203.29.36%20PM.png?raw=true
+https://github.com/JohnnyMatharu/Team-Profile-Generator/blob/main/screenshot.jpg?raw=true
 
 # Made by 
 Johnny (Indermeet) Singh
